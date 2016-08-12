@@ -28,6 +28,10 @@ const AngularTribute = ($timeout) => ({
           values: $scope.values
         }, ($scope.options || {})));
       }
+      // Update first collection when values changed
+      $scope.$watch('values', (newValue, oldValue) => {
+        $scope.tribute.append(0, newValue, true);
+      });
 
       $scope.tribute.attach($element[0]);
 

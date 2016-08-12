@@ -82,6 +82,12 @@ You can modify this structure using the built-in [Tribute options](https://githu
 
 Tribute broadcasts two events — a `tribute-replaced` event, and a `tribute-no-match` event (see docs [here](https://github.com/zurb/tribute#replace-event)). For your convenience, you can bind to these events by passing a function to `on-replaced` or `on-no-match` attributes respectively.
 
+## Build
+
+```
+npm install && npm run build:all
+```
+
 ## License
 
 MIT © [ZURB](http://zurb.com)
