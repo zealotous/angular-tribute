@@ -1,9 +1,13 @@
 {
   "name": "angular-tribute",
   "description": "An AngularJS wrapper for ZURB's Tribute library for native @mentions",
-  "main": "index.js",
+  "main": "index.umd.js",
   "authors": [
-    "[object Object]"
+    {
+      "name": "ZURB",
+      "email": "engineering@zurb.com",
+      "url": "http://zurb.com"
+    }
   ],
   "license": "MIT",
   "keywords": [
@@ -19,5 +23,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "tribute": "^2.0.5"
+  }
 }
