@@ -1,0 +1,23 @@
+{
+  "name": "angular-tribute",
+  "description": "An AngularJS wrapper for ZURB's Tribute library for native @mentions",
+  "main": "index.js",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "tribute",
+    "mention",
+    "input",
+    "AngularJS"
+  ],
+  "homepage": "https://github.com/zealotous/angular-tribute",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
