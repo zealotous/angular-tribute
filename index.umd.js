@@ -19,11 +19,11 @@
         onReplaced: '&',
         onNoMatch: '&'
       },
-      controller: function controller($scope) {
+      controller: ['$scope', function ($scope) {
         this.$onDestroy = function () {
           $scope.tribute.hideMenu();
         };
-      },
+      }],
       compile: function compile($element, $attrs) {
         var _this = this;
 
