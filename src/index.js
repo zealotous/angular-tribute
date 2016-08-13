@@ -4,7 +4,7 @@ if (typeof Tribute === 'undefined') {
   throw new Error('[AngularTribute] cannot locate tributejs!');
 }
 
-const AngularTribute = ($timeout) => ({
+const AngularTribute = ['$timeout', ($timeout) => ({
   restrict: 'A',
   scope: {
     values: '=',
@@ -12,11 +12,11 @@ const AngularTribute = ($timeout) => ({
     onReplaced: '&',
     onNoMatch: '&'
   },
-  controller: function($scope) {
+  controller: ['$scope', function($scope) {
     this.$onDestroy = () => {
       $scope.tribute.hideMenu();
     };
-  },
+  }],
   compile($element, $attrs) {
     return ($scope, $element, $attrs) => {
       if (typeof $scope.options === 'array') {
@@ -45,8 +45,6 @@ const AngularTribute = ($timeout) => ({
       });
     }
   }
-});
-
-AngularTribute.$inject = ['$timeout'];
+})];
 
 export default AngularTribute;

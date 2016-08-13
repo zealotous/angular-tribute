@@ -10,7 +10,7 @@
     throw new Error('[AngularTribute] cannot locate tributejs!');
   }
 
-  var AngularTribute = function AngularTribute($timeout) {
+  var AngularTribute = ['$timeout', function ($timeout) {
     return {
       restrict: 'A',
       scope: {
@@ -55,9 +55,7 @@
         };
       }
     };
-  };
-
-  AngularTribute.$inject = ['$timeout'];
+  }];
 
   return AngularTribute;
 
