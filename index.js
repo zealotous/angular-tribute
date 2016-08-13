@@ -8,7 +8,7 @@ if (typeof Tribute === 'undefined') {
   throw new Error('[AngularTribute] cannot locate tributejs!');
 }
 
-var AngularTribute = function AngularTribute($timeout) {
+var AngularTribute = ['$timeout', function ($timeout) {
   return {
     restrict: 'A',
     scope: {
@@ -53,8 +53,6 @@ var AngularTribute = function AngularTribute($timeout) {
       };
     }
   };
-};
-
-AngularTribute.$inject = ['$timeout'];
+}];
 
 module.exports = AngularTribute;

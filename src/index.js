@@ -4,7 +4,7 @@ if (typeof Tribute === 'undefined') {
   throw new Error('[AngularTribute] cannot locate tributejs!');
 }
 
-const AngularTribute = ($timeout) => ({
+const AngularTribute = ['$timeout', ($timeout) => ({
   restrict: 'A',
   scope: {
     values: '=',
@@ -45,8 +45,6 @@ const AngularTribute = ($timeout) => ({
       });
     }
   }
-});
-
-AngularTribute.$inject = ['$timeout'];
+})];
 
 export default AngularTribute;
